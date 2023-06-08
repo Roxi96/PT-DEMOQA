@@ -1,5 +1,5 @@
 # PT-DEMOQA
-Evaluacion tecnica , scripts automatizados para DEMOQA.
+Evaluacion tecnica , scripts automatizados para el website de DEMOQA.
 
 
 ## Requisitos
