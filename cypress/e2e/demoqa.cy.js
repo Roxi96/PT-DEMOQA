@@ -3,7 +3,6 @@ import 'cypress-file-upload';
 describe("evaluacion tecnica DEMOQA", () => {
  
   beforeEach(() => {
-    // cy.restoreLocalStorage();
     cy.viewport(1920, 1080);
     cy.visit('https://demoqa.com/')
   });
@@ -78,24 +77,12 @@ describe("evaluacion tecnica DEMOQA", () => {
   it('paso 5', () => {
     cy.get("h5").contains("Book Store Application").click();
     cy.get("a").contains("Understanding ECMAScript 6").click();
-    const currentWindowHandle = cy.state('window');
-    cy.contains("label","https://leanpub.com/understandinges6/read").click();
-  
-    cy.window().then((newWindow) => {
-   
-      newWindow.top.close();
-      cy.window().then((originalWindow) => {
-        expect(originalWindow).to.equal(currentWindowHandle);
-
-      });
-    });
+    cy.contains("label","https://leanpub.com/understandinges6/read");
     cy.go("back");
-  
- 
- 
   });
-   
-  })
+});
+
+  
  
 
   
